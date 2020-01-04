@@ -72,7 +72,7 @@ def build_model():
 
     parameters = {
         'vect__ngram_range': ((1, 1), (1, 2)),
-        'clf__estimator__learning_rate': [0.1],
+        'clf__estimator__learning_rate': [0.1, 0.01, 0.9, 1, 0.5],
     }
 
     cv = GridSearchCV(pipeline, param_grid=parameters, verbose=2, n_jobs=1)
